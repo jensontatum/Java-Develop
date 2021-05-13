@@ -36,11 +36,11 @@ Hotspot、 JRockit、J9 三大虚拟机
 
 ###### 2.1类的加载过程
 
-![image-20201223141211620](C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20201223141211620.png)
+![image-20201223141211620](https://raw.githubusercontent.com/jensontatum/Java-Develop/master/images/image-20201223141211620.png)
 
-![image-20201223141358658](C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20201223141358658.png)
+![image-20201223141358658](https://raw.githubusercontent.com/jensontatum/Java-Develop/master/images/image-20201223141358658.png)
 
-<img src="C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20201223141559000.png" alt="image-20201223141559000" style="zoom:80%;" />
+<img src="https://raw.githubusercontent.com/jensontatum/Java-Develop/master/images/image-20201223141559000.png" alt="image-20201223141559000" style="zoom:80%;" />
 
 - 加载（虚拟机自带的类加载器）
 
@@ -58,7 +58,7 @@ Hotspot、 JRockit、J9 三大虚拟机
 
     ​		②方法区是用于存储虚拟机加载的类信息、常量、静态变量、是各个线程共享的内存区域。方法区还包含一部分是运行时常量池，其中的主要内容来自于JVM对Class的加载。
 
-![image-20201223160632929](C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20201223160632929.png)
+![image-20201223160632929](https://raw.githubusercontent.com/jensontatum/Java-Develop/master/images/image-20201223160632929.png)
 
 - 验证
 
