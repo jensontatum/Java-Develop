@@ -14,6 +14,7 @@ Hotspot、 JRockit、J9 三大虚拟机
   - 内存布局如下：
   
     ![image-20210323155605491](C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20210323155605491.png)
+    ![image-20210323155605491](https://raw.githubusercontent.com/jensontatum/Java-Develop/master/images/image-20210323155605491.png)
 
 ###### 2. JRockit虚拟机
 
