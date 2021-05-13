@@ -77,7 +77,7 @@ Hotspot、 JRockit、J9 三大虚拟机
   - 解析操作常常伴随着JVM在执行完初始化之后再执行
   - 符号引用就是一组符号来描述所引用的目标。符号引用的字面量形式明确定义在《java虚拟机规范》的Class文件格式中。直接引用就是直接指向目标的指针、相对偏移量或一个间接定位到目标的句柄。
 
-  ![image-20201223162848291](C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20201223162848291.png)
+  ![image-20201223162848291](https://raw.githubusercontent.com/jensontatum/Java-Develop/master/images/image-20201223162848291.png)
 
 - 初始化
 
@@ -91,23 +91,23 @@ Hotspot、 JRockit、J9 三大虚拟机
 
 ###### 2.2 类加载子系统的作用
 
-![image-20201222151431274](C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20201222151431274.png)
+![image-20201222151431274](https://raw.githubusercontent.com/jensontatum/Java-Develop/master/images/image-20201222151431274.png)
 
 ###### 2.3 类加载器的分类
 
 - 引导类加载器：   BootStrap ClassLoader(又叫启动类加载器)
 
-  ![image-20201223140712889](C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20201223140712889.png)
+  ![image-20201223140712889](https://raw.githubusercontent.com/jensontatum/Java-Develop/master/images/image-20201223140712889.png)
 
 - 自定义类加载器：将所有派生于抽象类ClassLoader的类加载器都划分为自定义类加载器，包含：
 
   - 扩展类加载器    Extention ClassLoader
 
-    ![image-20201223140736405](C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20201223140736405.png)
+    ![image-20201223140736405](https://raw.githubusercontent.com/jensontatum/Java-Develop/master/images/image-20201223140736405.png)
 
   - 系统类加载器    Applicaton ClassLoader （又叫应用类加载器）
 
-    ![image-20201223140819540](C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20201223140819540.png)
+    ![image-20201223140819540](https://raw.githubusercontent.com/jensontatum/Java-Develop/master/images/image-20201223140819540.png)
 
   - 用户自定义加载器
 
@@ -115,7 +115,7 @@ Hotspot、 JRockit、J9 三大虚拟机
 
 ###### 2.4 双亲委派机制
 
-<img src="C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20201223165256658.png" alt="image-20201223165256658" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/jensontatum/Java-Develop/master/images/image-20201223165256658.png" alt="image-20201223165256658" style="zoom:50%;" />
 
    		 说明：这里的四者之间的关系是包含关系，不是上下层，也不是子父类的继承关系
 
@@ -131,7 +131,7 @@ Hotspot、 JRockit、J9 三大虚拟机
 
 ## 三、运行时数据区概述及线程
 
-![image-20210323155838146](C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20210323155838146.png)
+![image-20210323155838146](https://raw.githubusercontent.com/jensontatum/Java-Develop/master/images/image-20210323155838146.png)
 
 Java和C++之间有一堵由内存动态分配和垃圾回收技术所围成的高墙，墙外面的人想进去，墙里面的人想出来；
 
@@ -167,7 +167,7 @@ Java和C++之间有一堵由内存动态分配和垃圾回收技术所围成的�
 
 - **作用**：PC寄存器用来存储指向下一条指令的地址，也就是将要执行的指令代码。由执行引擎读取下一条指令。
 
-  ​		                                     <img src="C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20210323174614893.png" alt="image-20210323174614893" style="zoom:50%;" />
+  ​		                                     <img src="https://raw.githubusercontent.com/jensontatum/Java-Develop/master/images/image-20210323174614893.png" alt="image-20210323174614893" style="zoom:50%;" />
 
   - 它是程序控制流的指示器，分支、循环、跳转、异常处理、线程恢复等基础功能都需要依赖这个计数器来完成。
   - 字节码解释器（执行引擎）工作时就是通过改变这个计数器的值来选取下一条需要执行的字节码指令。
@@ -239,7 +239,7 @@ Java和C++之间有一堵由内存动态分配和垃圾回收技术所围成的�
 
 - 一些附加信息
 
-  <img src="C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20210323163359348.png" alt="image-20210323163359348" style="zoom: 50%;" />
+  <img src="https://raw.githubusercontent.com/jensontatum/Java-Develop/master/images/image-20210323163359348.png" alt="image-20210323163359348" style="zoom: 50%;" />
 
 ##### 3.局部变量表
 
@@ -279,11 +279,11 @@ Java和C++之间有一堵由内存动态分配和垃圾回收技术所围成的�
 
   - 如果当前帧是由构造方法或者实例方法创建的，那么该对象引用this将会存放在index为0的slot处，其余的参数按照参数表顺序继续排列。
 
-    <img src="C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20210323173011029.png" alt="image-20210323173011029" style="zoom: 50%;" />
+    <img src="https://raw.githubusercontent.com/jensontatum/Java-Develop/master/images/image-20210323173011029.png" alt="image-20210323173011029" style="zoom: 50%;" />
 
   - **栈帧中的局部变量表中的槽位是可以重用的**，如果一个局部变量过了其作用域，那么在其作用域之后申明的新的局部变量就很有可能会复用过期局部变量的槽位，从而**达到节省资源的目的**。
 
-    <img src="C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20210323173636580.png" alt="image-20210323173636580" style="zoom:50%;" />
+    <img src="https://raw.githubusercontent.com/jensontatum/Java-Develop/master/images/image-20210323173636580.png" alt="image-20210323173636580" style="zoom:50%;" />
 
   - 静态变量和局部变量的对比：
 
@@ -363,7 +363,7 @@ Java和C++之间有一堵由内存动态分配和垃圾回收技术所围成的�
 
 - 堆，是GC（Garbage Collection，垃圾收集器）执行垃圾回收的重点区域。
 
-  ![image-20210328143251816](C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20210328143251816.png)
+  ![image-20210328143251816](https://raw.githubusercontent.com/jensontatum/Java-Develop/master/images/image-20210328143251816.png)
 
 ##### 2.设置堆内存大小与OOM
 
@@ -386,7 +386,7 @@ Java和C++之间有一堵由内存动态分配和垃圾回收技术所围成的�
 
 - 其中年轻代又可以划分为Eden空间、Survivor0空间和Survivor1空间（有时也叫做from区、to区，其中两个Survivor区角色总是互换，谁空谁是to区）。
 
-  ![image-20210328144429996](C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20210328144429996.png)
+  ![image-20210328144429996](https://raw.githubusercontent.com/jensontatum/Java-Develop/master/images/image-20210328144429996.png)
 
 - 配置新生代与老年代在堆结构的占比。
   - 默认-XX：NewRatio=2，表示新生代占1，老年代占2，新生代占整个堆的1/3
@@ -510,11 +510,11 @@ Java和C++之间有一堵由内存动态分配和垃圾回收技术所围成的�
   - 当一个对象在方法中被定义后，对象只在方法内部使用，则认为没有发生逃逸。
   - 当一个对象在方法中被定义后，它被外部方法所引用，则认为发生逃逸。例如作为调用参数传递到其他地方中。
 
-  ![image-20210329092021827](C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20210329092021827.png)
+  ![image-20210329092021827](https://raw.githubusercontent.com/jensontatum/Java-Develop/master/images/image-20210329092021827.png)
 
   上述对象没有发生逃逸的对象，则可以分配到栈上，随着方法执行的结束，栈空间就被移除。
 
-  ![image-20210329092114343](C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20210329092114343.png)
+  ![image-20210329092114343](https://raw.githubusercontent.com/jensontatum/Java-Develop/master/images/image-20210329092114343.png)
 
 ###### 2.逃逸分析：代码优化
 
@@ -546,15 +546,15 @@ Java和C++之间有一堵由内存动态分配和垃圾回收技术所围成的�
 
 ##### 1.堆、栈、方法区的交互关系
 
-<img src="C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20210329093953452.png" alt="image-20210329093953452" style="zoom: 50%;" />
+<img src="https://raw.githubusercontent.com/jensontatum/Java-Develop/master/images/image-20210329093953452.png" alt="image-20210329093953452" style="zoom: 50%;" />
 
 ##### 2.方法区的理解
 
 - 方法区（Method Area）与Java堆一样，是各个**线程共享**的内存区域。**方法区看作是独立于Java堆的内存空间。**
 
-  <img src="C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20210329094631833.png" alt="image-20210329094631833" style="zoom: 50%;" />![image-20210329094654027](C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20210329094654027.png)
+  <img src="https://raw.githubusercontent.com/jensontatum/Java-Develop/master/images/image-20210329094631833.png" alt="image-20210329094631833" style="zoom: 50%;" />![image-20210329094654027](https://raw.githubusercontent.com/jensontatum/Java-Develop/master/images/image-20210329094654027.png)
 
-  <img src="C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20210329094722019.png" alt="image-20210329094722019" style="zoom:50%;" />
+  <img src="https://raw.githubusercontent.com/jensontatum/Java-Develop/master/images/image-20210329094722019.png" alt="image-20210329094722019" style="zoom:50%;" />
 
 - **方法区在JVM启动的时候被创建**，并且它的实际的物理内存空间中和Java堆区一样都可以是不连续的。
 
@@ -572,7 +572,7 @@ Java和C++之间有一堵由内存动态分配和垃圾回收技术所围成的�
 
 - 设置方法区大小：方法区大小不是固定的，JVM根据应用的需要动态调整
 
-  - ![image-20210329101312950](C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20210329101312950.png)
+  - ![image-20210329101312950](https://raw.githubusercontent.com/jensontatum/Java-Develop/master/images/image-20210329101312950.png)
 
   - **jdk8及以后**：
     - 默认值依赖于平台。windows下，**-XX:Metaspacesize是21M，-XX:MaxMetaspaceSize的值是-1，即没有限制。**
@@ -599,7 +599,7 @@ Java和C++之间有一堵由内存动态分配和垃圾回收技术所围成的�
 
 - 方法区用于存储已被虚拟机加载的**类型信息、方法信息、属性信息、运行时常量池、JIT及时编译器编译后的代码缓存、常量**等，注意：**静态变量和字符串常量池在堆中**。
 
-  <img src="C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20210329114225369.png" alt="image-20210329114225369" style="zoom:50%;" />
+  <img src="https://raw.githubusercontent.com/jensontatum/Java-Develop/master/images/image-20210329114225369.png" alt="image-20210329114225369" style="zoom:50%;" />
 
   - **类型信息**
     对每个加载的类型（类clajs、接口interface、枚举enum、注解annotation），JVM必须在方法区中存储以下类型信息：
@@ -648,13 +648,13 @@ Java和C++之间有一堵由内存动态分配和垃圾回收技术所围成的�
 
 ###### ①.Hotspot中方法区的演进细节
 
-<img src="C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20210329111922421.png" alt="image-20210329111922421" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/jensontatum/Java-Develop/master/images/image-20210329111922421.png" alt="image-20210329111922421" style="zoom:50%;" />
 
-<img src="C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20210329112042984.png" alt="image-20210329112042984" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/jensontatum/Java-Develop/master/images/image-20210329112042984.png" alt="image-20210329112042984" style="zoom:50%;" />
 
-<img src="C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20210329112105801.png" alt="image-20210329112105801" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/jensontatum/Java-Develop/master/images/image-20210329112105801.png" alt="image-20210329112105801" style="zoom:50%;" />
 
-<img src="C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20210329112149951.png" alt="image-20210329112149951" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/jensontatum/Java-Develop/master/images/image-20210329112149951.png" alt="image-20210329112149951" style="zoom:50%;" />
 
 ###### ②.面：永久代为什么要被元空间替换
 
@@ -681,13 +681,13 @@ Java和C++之间有一堵由内存动态分配和垃圾回收技术所围成的�
 
 ##### 8.总结
 
-<img src="C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20210329104907270.png" alt="image-20210329104907270" style="zoom: 50%;" />
+<img src="https://raw.githubusercontent.com/jensontatum/Java-Develop/master/images/image-20210329104907270.png" alt="image-20210329104907270" style="zoom: 50%;" />
 
 ##### 9.常见面试题
 
-<img src="C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20210329104930195.png" alt="image-20210329104930195" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/jensontatum/Java-Develop/master/images/image-20210329104930195.png" alt="image-20210329104930195" style="zoom:50%;" />
 
-<img src="C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20210329104944781.png" alt="image-20210329104944781" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/jensontatum/Java-Develop/master/images/image-20210329104944781.png" alt="image-20210329104944781" style="zoom:50%;" />
 
 #### 3.8 运行时数据区各区域的OOM、GC情况
 
@@ -705,21 +705,21 @@ Java和C++之间有一堵由内存动态分配和垃圾回收技术所围成的�
 
 - 创建对象的方式
 
-  <img src="C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20210329151245923.png" alt="image-20210329151245923" style="zoom: 67%;" />
+  <img src="https://raw.githubusercontent.com/jensontatum/Java-Develop/master/images/image-20210329151245923.png" alt="image-20210329151245923" style="zoom: 67%;" />
 
 - 创建对象的步骤
 
-  <img src="C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20210329152139806.png" alt="image-20210329152139806" style="zoom: 50%;" />
+  <img src="https://raw.githubusercontent.com/jensontatum/Java-Develop/master/images/image-20210329152139806.png" alt="image-20210329152139806" style="zoom: 50%;" />
 
   
 
-<img src="C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20210118113514947.png" alt="image-20210118113514947" style="zoom: 67%;" />
+<img src="https://raw.githubusercontent.com/jensontatum/Java-Develop/master/images/image-20210118113514947.png" alt="image-20210118113514947" style="zoom: 67%;" />
 
-<img src="C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20210118113332148.png" alt="image-20210118113332148" style="zoom: 67%;" />
+<img src="https://raw.githubusercontent.com/jensontatum/Java-Develop/master/images/image-20210118113332148.png" alt="image-20210118113332148" style="zoom: 67%;" />
 
-<img src="C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20210118113405075.png" alt="image-20210118113405075" style="zoom: 67%;" />
+<img src="https://raw.githubusercontent.com/jensontatum/Java-Develop/master/images/image-20210118113405075.png" alt="image-20210118113405075" style="zoom: 67%;" />
 
-<img src="C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20210118113258848.png" alt="image-20210118113258848" style="zoom: 67%;" />
+<img src="https://raw.githubusercontent.com/jensontatum/Java-Develop/master/images/image-20210118113258848.png" alt="image-20210118113258848" style="zoom: 67%;" />
 
 - 补充说明：给对象的属性赋值的操作：
   ①属性的默认初始化--->  ②显式初始化/③代码块中初始化----> ④构造器中初始化
@@ -728,9 +728,9 @@ Java和C++之间有一堵由内存动态分配和垃圾回收技术所围成的�
 
 ##### 2.对象的内存布局
 
- <img src="C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20210329154806149.png" alt="image-20210329154806149" style="zoom:67%;" />
+ <img src="https://raw.githubusercontent.com/jensontatum/Java-Develop/master/images/image-20210329154806149.png" alt="image-20210329154806149" style="zoom:67%;" />
 
-![image-20210329155243670](C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20210329155243670.png)
+![image-20210329155243670](https://raw.githubusercontent.com/jensontatum/Java-Develop/master/images/image-20210329155243670.png)
 
 ##### 3.对象的访问定位
 
@@ -740,7 +740,7 @@ Java和C++之间有一堵由内存动态分配和垃圾回收技术所围成的�
 
   - 使用句柄访问的话，Java堆中将划分一块内存作为句柄池，reference中存储的就是对象的句柄池的地址，而句柄池包含了对象实例数据与类型数据的各自具体的地址信息，如下图所示：
 
-    <img src="C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20210329163620995.png" alt="image-20210329163620995" style="zoom:50%;" />
+    <img src="https://raw.githubusercontent.com/jensontatum/Java-Develop/master/images/image-20210329163620995.png" alt="image-20210329163620995" style="zoom:50%;" />
 
   - 优点：reference中存储的是稳定的句柄地址，在对象被移动（垃圾回收的标记压缩算法经常需要移动对象）时只需改变句柄中的实例数据指针，而reference本身不需要被修改
 
@@ -750,7 +750,7 @@ Java和C++之间有一堵由内存动态分配和垃圾回收技术所围成的�
 
   - 使用直接指针访问的话，Java堆中的对象的对象头汇总需包含指向对象类型数据的指针，，reference中存储的时对象地址。**HotSpot默认使用的对象访问定位**。如下图所示：
 
-    <img src="C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20210329164158902.png" alt="image-20210329164158902" style="zoom:50%;" />
+    <img src="https://raw.githubusercontent.com/jensontatum/Java-Develop/master/images/image-20210329164158902.png" alt="image-20210329164158902" style="zoom:50%;" />
 
   - 优点：访问速度更快，节省了一次指针定位的时间开销。此外不要开辟额外的内存用于存放句柄池，节省了内存开销。
 
@@ -758,7 +758,7 @@ Java和C++之间有一堵由内存动态分配和垃圾回收技术所围成的�
 
 #### 4.3 执行引擎
 
-<img src="C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20210329170625379.png" alt="image-20210329170625379" style="zoom: 67%;" />
+<img src="https://raw.githubusercontent.com/jensontatum/Java-Develop/master/images/image-20210329170625379.png" alt="image-20210329170625379" style="zoom: 67%;" />
 
 ##### 1.执行引擎概述
 
@@ -772,7 +772,7 @@ Java和C++之间有一堵由内存动态分配和垃圾回收技术所围成的�
 
 - 执行引擎的工作过程
 
-  <img src="C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20210329171422079.png" alt="image-20210329171422079" style="zoom: 50%;" />
+  <img src="https://raw.githubusercontent.com/jensontatum/Java-Develop/master/images/image-20210329171422079.png" alt="image-20210329171422079" style="zoom: 50%;" />
 
 ##### 2.Java代码编译和执行过程
 
@@ -800,7 +800,7 @@ Java和C++之间有一堵由内存动态分配和垃圾回收技术所围成的�
 
 - string在jdk8及以前内部定义了final char[] value用于存储字符串数据。jdk9时改为byte[]，原因如下截图显示：
 
-  ![image-20210226184426262](C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20210226184426262.png)
+  ![image-20210226184426262](https://raw.githubusercontent.com/jensontatum/Java-Develop/master/images/image-20210226184426262.png)
 
 - 结论：String再也不用char[]来存储啦，改成了byte[]加上编码标记，节约了一些空间。此外，StringBuilder和StringBuffer底层也跟着改变
 
@@ -1111,7 +1111,7 @@ String s5 = s4 + "hadoop";
   
 - 底层原理：
 
-  ![image-20210227105156689](C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20210227105156689.png)
+  ![image-20210227105156689](https://raw.githubusercontent.com/jensontatum/Java-Develop/master/images/image-20210227105156689.png)
 
 - 总结
   - 字符串拼接操作不一定使用的是StringBuilder!
@@ -1401,7 +1401,7 @@ String s5 = s4 + "hadoop";
 
 三种算法的对比：
 
-![image-20210304204410419](C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20210304204410419.png)
+![image-20210304204410419](https://raw.githubusercontent.com/jensontatum/Java-Develop/master/images/image-20210304204410419.png)
 
 ##### 5.29 分代算法
 
@@ -1458,7 +1458,7 @@ String s5 = s4 + "hadoop";
 - 在默认情况下，通过System.（）或者Runtime.getRuntime（）.gc（）的调用，会显式触发Full GC，同时对老年代和新生代进行回收，尝试释放被丢弃对象占用的内存。
   然而System.gc（）调用附带一个免责声明，无法保证对垃圾收集器的调用。且不建议自己调用，因为JVM有自己的GC策略
 
-  ![image-20210322095905012](C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20210322095905012.png)
+  ![image-20210322095905012](https://raw.githubusercontent.com/jensontatum/Java-Develop/master/images/image-20210322095905012.png)
 
 ###### 5.32 内存溢出与内存泄漏
 
@@ -1475,7 +1475,7 @@ String s5 = s4 + "hadoop";
 
   - 举例：类中一个变量定义成局部变量时，出了方法就要被回收了，如果被定义成成员变量，生命周期就会长一些，如果被定义成静态成员变量，生命周期更长，随着类的加载而加载，随着类的消亡而消亡。本来生命周期不需要定义成怎么长，被我们误定义了。当程序中存在大量的生命周期很长的对象，可以理解为宽泛意义上的内存泄漏。
   
-    ![image-20210322091147533](C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20210322091147533.png)
+    ![image-20210322091147533](https://raw.githubusercontent.com/jensontatum/Java-Develop/master/images/image-20210322091147533.png)
 
 ###### 5.32 Stop The World
 
@@ -1557,7 +1557,7 @@ String s5 = s4 + "hadoop";
 
 - 用法：
 
-  ![image-20210322163943209](C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20210322163943209.png)
+  ![image-20210322163943209](https://raw.githubusercontent.com/jensontatum/Java-Develop/master/images/image-20210322163943209.png)
 
 ###### 5.37 弱引用
 
@@ -1571,7 +1571,7 @@ String s5 = s4 + "hadoop";
 
 - **用法**：
 
-  ![image-20210322170545706](C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20210322170545706.png)
+  ![image-20210322170545706](https://raw.githubusercontent.com/jensontatum/Java-Develop/master/images/image-20210322170545706.png)
 
 ###### 面：WeakHashMap底层原理
 
@@ -1588,7 +1588,7 @@ String s5 = s4 + "hadoop";
 
 - **用法**：
 
-  ![image-20210322171452042](C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20210322171452042.png)
+  ![image-20210322171452042](https://raw.githubusercontent.com/jensontatum/Java-Develop/master/images/image-20210322171452042.png)
 
 ###### 5.39 终结器引用
 
@@ -1622,7 +1622,7 @@ String s5 = s4 + "hadoop";
 
 垃圾回收器的经典组合：
 
-![image-20210322172921260](C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20210322172921260.png)
+![image-20210322172921260](https://raw.githubusercontent.com/jensontatum/Java-Develop/master/images/image-20210322172921260.png)
 
 - 1  两个收集器间有连线，表明它们可以搭配使用：Serial/Serial old，Serial/CMS，ParNew/Serial old，ParNew/CMS、Parallel Scavenge/Serial old，Parallel Scavenge/Parallel old，G1；
 - 2   其中Serial old作为CMS出现"Concurrent Mode Failure"失败的后备预案。
@@ -1642,7 +1642,7 @@ String s5 = s4 + "hadoop";
 
 - 原理图：
 
-  <img src="C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20210322173943148.png" alt="image-20210322173943148" style="zoom:67%;" />
+  <img src="https://raw.githubusercontent.com/jensontatum/Java-Develop/master/images/image-20210322173943148.png" alt="image-20210322173943148" style="zoom:67%;" />
 
 - 总结：
   - 优势：**简单而高效**（与其他收集器的单线程比），对于限定单个CPU的环境来说，Serial收集器由于没有线程交互的开销，专心做垃圾收集自然可以获得最高的单线程收集效率。
@@ -1658,7 +1658,7 @@ String s5 = s4 + "hadoop";
 
 - 原理图：
 
-  ![image-20210322174534764](C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20210322174534764.png)
+  ![image-20210322174534764](https://raw.githubusercontent.com/jensontatum/Java-Develop/master/images/image-20210322174534764.png)
 
 - 总结
   - ParNew和Serial收集器的对比？
@@ -1674,7 +1674,7 @@ String s5 = s4 + "hadoop";
 
 - 原理图：
 
-  ![image-20210322175454520](C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20210322175454520.png)
+  ![image-20210322175454520](https://raw.githubusercontent.com/jensontatum/Java-Develop/master/images/image-20210322175454520.png)
 
 - 总结
 
@@ -1729,7 +1729,7 @@ String s5 = s4 + "hadoop";
 
 - CMS的**工作原理**图
 
-  ![image-20210323093853999](C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20210323093853999.png)
+  ![image-20210323093853999](https://raw.githubusercontent.com/jensontatum/Java-Develop/master/images/image-20210323093853999.png)
 
   CMS整个过程分为4个主要阶段，即初始标记阶段、并发标记阶段、重新标记阶段和并发清除阶段。
 
@@ -1835,7 +1835,7 @@ String s5 = s4 + "hadoop";
 
   - 使用G1收集器时，它将整个Java堆划分成约2048个大小相同的独立Region块，每个Region块大小根据堆空间的实际大小而定，整体被控制在1MB到32MB之，且为2X，即1MB，2MB，4MB，8MB，16MB，32MB。可以通过-XX:G1HeapRegionsize设定。**所有的Region大小相同，且在JVM生命周期内不会被改变**。虽然还保留有新生代和老年代的概念，但新生代和老年代不再是物理隔离的了，它们都是一部分Region（不需要连续）的集合。通过Region的动态分配方式实现逻辑上的连续。
 
-    ![image-20210323113551137](C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20210323113551137.png)
+    ![image-20210323113551137](https://raw.githubusercontent.com/jensontatum/Java-Develop/master/images/image-20210323113551137.png)
 
   - 设置H的原因：
 
@@ -1853,7 +1853,7 @@ String s5 = s4 + "hadoop";
 
   - 如果需要，单线程、独占式、高强度的Full GC还是继续存在的。它针对Gc的评估失败提供了一种失败保护机制，即强力回收。
 
-    ![image-20210323114150218](C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20210323114150218.png)
+    ![image-20210323114150218](https://raw.githubusercontent.com/jensontatum/Java-Develop/master/images/image-20210323114150218.png)
 
   - 应用程序分配内存，**当年轻代的Eden区用尽时开始年轻代回收过程**；G1的年轻代收集阶段是一个**并行的独占式**收集器。在年轻代回收期，G1GC暂停所有应用程序程，启动多线程执行年轻代回收。然后**从年轻代区间移动存活对象到Survivor区间或者老年区间，也有可能是两个区间都会涉及**
 
@@ -1861,17 +1861,17 @@ String s5 = s4 + "hadoop";
 
   - 标记完成马上开始混合回收过程。对于一个混合回收期，G1 GC从老年区间移动存活对象到空闲区间，这些空闲区间也就成为了老年代的一部分。老年代的G1回收器和其他GC不同，G1的老年代回收器不需要整个老年代被回收，一次只需要扫描/回收一小部分老年代的Region就可以了。同时，这个老年代Region是和年轻代一起被回收的。
 
-    ![image-20210323144454898](C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20210323144454898.png)
+    ![image-20210323144454898](https://raw.githubusercontent.com/jensontatum/Java-Develop/master/images/image-20210323144454898.png)
 
-    ![image-20210323144511741](C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20210323144511741.png)
+    ![image-20210323144511741](https://raw.githubusercontent.com/jensontatum/Java-Develop/master/images/image-20210323144511741.png)
 
-    ![image-20210323144525360](C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20210323144525360.png)
+    ![image-20210323144525360](https://raw.githubusercontent.com/jensontatum/Java-Develop/master/images/image-20210323144525360.png)
 
-    ![image-20210323144536945](C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20210323144536945.png)
+    ![image-20210323144536945](https://raw.githubusercontent.com/jensontatum/Java-Develop/master/images/image-20210323144536945.png)
 
-    ![image-20210323144552968](C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20210323144552968.png)
+    ![image-20210323144552968](https://raw.githubusercontent.com/jensontatum/Java-Develop/master/images/image-20210323144552968.png)
 
-    ![image-20210323144727079](C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20210323144727079.png)
+    ![image-20210323144727079](https://raw.githubusercontent.com/jensontatum/Java-Develop/master/images/image-20210323144727079.png)
 
 ###### 5.48 垃圾回收器总结
 
@@ -1881,10 +1881,10 @@ String s5 = s4 + "hadoop";
 
 ##### 5.5 大厂面试题
 
-![image-20210301135811532](C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20210301135811532.png)
+![image-20210301135811532](https://raw.githubusercontent.com/jensontatum/Java-Develop/master/images/image-20210301135811532.png)
 
-![image-20210301135822404](C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20210301135822404.png)
+![image-20210301135822404](https://raw.githubusercontent.com/jensontatum/Java-Develop/master/images/image-20210301135822404.png)
 
-![image-20210329101538347](C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20210329101538347.png)
+![image-20210329101538347](https://raw.githubusercontent.com/jensontatum/Java-Develop/master/images/image-20210329101538347.png)
 
-![image-20201230160626685](C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20201230160626685.png)
+![image-20201230160626685](https://raw.githubusercontent.com/jensontatum/Java-Develop/master/images/image-20201230160626685.png)
